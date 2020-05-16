@@ -53,7 +53,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateDynamicFeatureButtonState() {
-        button_app_open.isEnabled = manager.installedModules.contains(DYNAMIC_MODULE_NAME)
+        val isDownloaded = manager.installedModules.contains(DYNAMIC_MODULE_NAME)
+        button_app_open.isEnabled = isDownloaded
+        button_app_download.isEnabled = !isDownloaded
     }
 
     private fun showToast(message: String) {
