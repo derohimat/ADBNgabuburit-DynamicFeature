@@ -1,0 +1,3 @@
+rootProject.name='ADB Dynamic Feature'
+include ':app'
+include ':ondemand'
